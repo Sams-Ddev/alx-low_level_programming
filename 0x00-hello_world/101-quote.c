@@ -6,6 +6,8 @@
  *
  * Description: prints exactly  the Dors's quote
  *
+ * write function is used to write data to a file descriptor
+ *
  * Return: the return value always 1 (Success)
  */
 
