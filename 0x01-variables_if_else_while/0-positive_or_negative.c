@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
+#include <stdio.h>
 
 /**
  * main - will assign a random number to the variable and
@@ -19,6 +19,10 @@ int main(void)
 	if (n < 0)
 	{
 		printf("n = %d is Negative\n", n);
+	}
+	else if (n == 0)
+	{
+		printf("n = %d is Zero\n", n);
 	}
 	else
 	{
