@@ -1,14 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-
 /**
- * main - will assign a random number to the variable and
- * each time it is executed
- * and determines if each random number is
- * _potive or _negative integer
- *
- * Return: 0 if number is negative.1 if n is positive
+ * main - assigns a random number to int n everytime
+ * it executes, and prints it
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -17,19 +13,10 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
-	{
-		printf("%d is Positive", n);
-	}
+		printf("%d is positive\n", n);
 	else if (n == 0)
-	{
-		printf("%d is Zero", n);
-	}
+		printf("%d is zero\n", n);
 	else if (n < 0)
-	{
-		printf("%d is Negative", n);
-	}
-
-	printf("\n");
-
+		printf("%d is negative\n", n);
 	return (0);
 }
