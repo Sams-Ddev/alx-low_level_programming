@@ -6,25 +6,29 @@
 /**
  * main - assigning randome numbers to n
  *
- * Return - function zero
+ * Return: 0
  */
 int main(void)
 {
 	int n;
+	int last_dig;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (n > 5)
+
+	int last_dig = n % 10;
+	
+	if (last_dig > 5)
 	{
-		printf("Last digit of n is %d and is greater than 5\n", n);
+		printf("Last digit of %d is %d and is greater than 5", n, last_dig);
 	}
-	else if (n == 0)
+	else if (last_dig == 0)
 	{
-		printf("Last digits of n is %d and is 0\n", n);
+		printf("Last digits of %d is %d and is 0", n, last_dig );
 	}
-	else if (n < 6 && n != 0)
+	else if (last_dig < 6 && n != 0)
 	{
-		printf("Last digit of n is %d and is less than 6 and not 0\n", n);
+		printf("Last digit of %d is %d and is less than 6 and not 0", n, last_dig);
 	}
 	return (0);
 }
