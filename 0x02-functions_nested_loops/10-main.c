@@ -6,8 +6,11 @@
  * Return - the addition of the two numbers
  */
 
-int add(int a, int b)
-int _putchar(int a, int b);
+int add(int a, int b);
+int _putchar(char a);
+
+int a = 4;
+int b = 5;
 
 int main(void)
 {
