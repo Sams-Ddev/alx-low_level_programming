@@ -11,7 +11,7 @@ int _putchar(char a);
 
 int a = 4;
 int b = 5;
-int result =add(a, b);
+int result = const add(a, b);
 
 int main(void)
 {
