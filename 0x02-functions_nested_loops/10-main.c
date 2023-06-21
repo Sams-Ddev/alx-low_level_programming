@@ -11,10 +11,10 @@ int _putchar(char a);
 
 int a = 4;
 int b = 5;
+int result = a + b;
 
 int main(void)
 {
-    int sum = add(3, 5);
     _putchar('0' + result);
     _putchar('\n');
     return (a + b);
