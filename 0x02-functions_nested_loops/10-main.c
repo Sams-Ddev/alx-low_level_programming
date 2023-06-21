@@ -9,14 +9,17 @@
 int add(int a, int b);
 int _putchar(char a);
 
-int a = 4;
-int b = 5;
-int result = const add(a, b);
-
 int main(void)
 {
-    _putchar('0' + result);
+    int a = 5;
+    int b = 10;
+    int result;
+
+    result = add(a, b);
+
+    _putchar(result + '0');
     _putchar('\n');
-    return (a + b);
+
+    return 0;
 }
 
