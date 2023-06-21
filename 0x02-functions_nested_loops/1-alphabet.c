@@ -6,9 +6,14 @@
  * in lowercase, followed by a new line
  *
  * Function is a void returns nothing.
+ *
+ * _putchar - prints character ro standard outout
+ *
+ * alp - universal variable.
  */
 
-void print_alphabet(void)
+void print_alphabet(void
+int _putchar(char alp);)
 {
 	char alp;
 
