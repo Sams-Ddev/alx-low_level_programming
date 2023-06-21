@@ -7,11 +7,11 @@
  * @c: The character to write to output
  * prints a single character to output
  *
- * returns 1 for success
+ * returns 1 for success, ON Error, -1.
  */
 
 
 int _putchar(char c)
 {
-	return (write(1 &c, 1));
+	return (write(1, &c, 1));
 }
