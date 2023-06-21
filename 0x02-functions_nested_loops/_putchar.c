@@ -1,13 +1,16 @@
+#include "main.h"
 #include <unistd.h>
 
 /**
- * putchar - prints char c on the standard output
+ * _putchar - prints char c on the standard output
  *
  * returns 1 for success
- * returns -1 for error
+ *
+ * char c - prints a single character to output
+ *
  */
 
 int _putchar(char c)
 {
-	return (write(1 &c, 1));
+	return (write(1 & c, 1));
 }
