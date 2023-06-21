@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * times_table -  a set function that prints the very 9 times table, starting with 0
+ * times_table -  a set function that prints the very
+ * 9 times table, starting with 0
  * rone = row, cone = column, d = digits of current result
  * Return: times table (sucess)
  * add extra space past single digit

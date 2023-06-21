@@ -1,0 +1,14 @@
+/* main.c */
+
+#include "main.h"
+
+int _putchar(int a, int b);
+
+int main(void)
+{
+    int result = add(3, 5);
+    _putchar('0' + result);
+    _putchar('\n');
+    return 0;
+}
+
