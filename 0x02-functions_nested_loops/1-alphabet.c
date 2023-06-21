@@ -2,35 +2,19 @@
 
 /**
  * print_alphabet - prints the alphabets,
- *
  * in lowercase, followed by a new line
- *
- * Function is a void returns nothing.
- *
- * _putchar - prints character ro standard outout
- *
- * alp - universal variable.
  */
-
-void print_alphabet(void
-int _putchar(char alp);)
+void print_alphabet(void)
 {
-	char alp;
+	char ch;
 
-	alp = 'a';
+	ch = 'a';
 
-	while (alp <= 'z')
+	while (ch <= 'z')
 	{
-		_putchar(alp);
-		alp++;
+		_putchar(ch);
+		ch++;
 	}
 
 	_putchar('\n');
-}
-
-int main(void)
-{
-	print_alphabet();
-
-	return (0);
 }
