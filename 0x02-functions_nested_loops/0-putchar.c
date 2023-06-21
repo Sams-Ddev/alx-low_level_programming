@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main -  prints _putchar, followed by a new line
+ * main -  prints  _putchar, followed by a new line
  * _putchar - takes single char set and output to the statndard output
- *
+ * @c: the character r print
  * Return: Always 0 (Success)
  */
 
