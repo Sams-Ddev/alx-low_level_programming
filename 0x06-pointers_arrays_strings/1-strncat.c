@@ -2,7 +2,7 @@
 /**
  * _strncat - concatenates (joins) two strings,
  * @dest: destination
- * @src: source(initializer)
+ * @src: source (initializer)
  * @n: total amount of bytes used from src.
  * Return: the pointer to dest.
  */
