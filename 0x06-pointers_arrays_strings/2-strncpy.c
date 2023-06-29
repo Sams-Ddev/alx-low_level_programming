@@ -9,12 +9,14 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
+	int idx = 0;
+	char null_pad = 0;
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
-		dest[i] = src[i];
-	for (i = 0; i < n; i++)
-		dest[i] = '\0';
-
+	while (idx < n)
+	{
+		null_pad = *(src + idx) == '\0' && !null_pad ? 1 : null_pad;
+		*(dest + idx) = null_pad ? '\0' : *(src + idx);
+		idx++;
+	}
 	return (dest);
 }
