@@ -39,7 +39,7 @@ Change into the 0x00-hello_world directory: cd alx-low_level_programming/0x00-he
 Run the desired script or compile the C code files using the provided Makefile.
 
 #Author
-Julien Barbier
+Sam-Ddev Zerd
 
 #License
 This project is licensed under the MIT License - see the LICENSE file for details.
