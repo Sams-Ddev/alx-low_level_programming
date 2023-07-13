@@ -12,11 +12,9 @@
 
 void *malloc_checked(unsigned int b)
 {
-	unsigned int *b;
-
-	brslt = malloc(b);
-	if (brslt == NULL)
-		exit(98);
-	return (p);
+	void *rnum = malloc(b);
+	if (rnum)
+		return (rnum);
+	exit(98);
 
 }
