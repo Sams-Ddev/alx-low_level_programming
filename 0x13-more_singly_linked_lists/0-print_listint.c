@@ -9,12 +9,15 @@
  *
  * Return: the number of nodes
  */
-size_t print_listint(const listint_t *h) 
+size_t print_listint(const listint_t *h)
 {
-       	size_t counts = 0;
-	
-	/* Loops through the list while the pointer is not NULL 
-	 * A for could me used toooooo*/
+	size_t counts = 0;
+
+	/*
+	 * Loops through the list while the pointer is not NULL
+	 * A for could me used toooooo
+	 */
+
 	while (h != NULL)
 	{
 		printf("%d\n", h->n);
@@ -24,7 +27,7 @@ size_t print_listint(const listint_t *h)
 		h = h->next;
 	}
 
-  return (counts);
+	return (counts);
 }
 
 
