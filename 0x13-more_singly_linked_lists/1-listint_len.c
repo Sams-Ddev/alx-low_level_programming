@@ -18,36 +18,13 @@ typedef struct listint_s
 
 size_t listint_len(const listint_t *h)
 {
-	size_t count = 0;
+	size_t counter = 0;
 	const listint_t *node = h;
 	while (node != NULL)
 	{
-		count++;
+		counter++;
 		node = node->next;
 	}
   
-	return count;
+	return counter;
 }
-
-int main(void) {
-  listint_t *head = NULL;
-  size_t len;
-
-  /* Create a linked list */
-  head = malloc(sizeof(listint_t));
-  head->n = 1;
-  head->next = malloc(sizeof(listint_t));
-  head->next->n = 2;
-  head->next->next = malloc(sizeof(listint_t));
-  head->next->next->n = 3;
-  head->next->next->next = NULL;
-
-  /* Calculate the length of the linked list */
-  len = listint_len(head);
-
-  /* Print the length of the linked list */
-  printf("The length of the linked list is: %zu\n", len);
-
-  return 0;
-}
-
