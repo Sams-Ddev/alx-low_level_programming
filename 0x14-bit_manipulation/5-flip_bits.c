@@ -14,7 +14,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int xor_result = n ^ m; /* XOR of the two numbers*/
 	unsigned int count = 0; /* Initialize a count variable to track the flipped bits*/
 
-	// Count the number of set bits (flipped bits) in xor_result
 	while (xor_result)
 	{
 		count += xor_result & 1; /* Check the least significant bit*/
