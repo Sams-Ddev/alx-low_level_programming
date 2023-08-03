@@ -7,7 +7,7 @@
  * @c: The character to print
  *
  * Return ;  On succeess 1.
- * on error, _1 is returned, and error is set 
+ * on error, _1 is returned, and error is set
  * appropriately.
  */
 

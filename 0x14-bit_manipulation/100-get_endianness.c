@@ -13,9 +13,10 @@ int get_endianness(void)
 	/* Typecast the integer's address to a character pointer*/
 	char *endian_check = (char *)&num;
 
-	if (*endian_check) /* If the value at the address pointed by endian_check is not 0*/
-		return 1; /* System is little endian */
+	/* If the value at the address pointed by endian_check is not 0*/
+	if (*endian_check)
+		return (1); /* System is little endian */
 	else
-		return 0; /* System is big endian */
+		return (0); /* System is big endian */
 }
 

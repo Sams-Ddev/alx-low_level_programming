@@ -8,8 +8,11 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int mask = 1UL << ((sizeof(unsigned long int) * 8) - 1);
-	int flag = 0;	/* used to keep track of whether we've encountered the
-			   first set bit in the number.*/
+	int flag = 0;
+	/*
+	 * used to keep track of whether we've encountered
+	 * the first set bit in the number.
+	 */
 
 	if (n == 0)
 	{

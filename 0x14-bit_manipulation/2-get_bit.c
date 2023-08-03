@@ -16,7 +16,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	/* Checks if the index is out of bounds */
 	if (index >= (sizeof(unsigned long int) * 8))
 		return (-1);
-	
+
 	/* Shift the bit at the desired index to the least significant position */
 	mask = 1UL << index;
 
