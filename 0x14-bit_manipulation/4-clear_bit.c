@@ -1,4 +1,4 @@
-#include "main.h"  // Include your header file here
+#include "main.h" 
 
 /**
  * clear_bit - Sets the value of a bit to 0 at a given index.
@@ -20,7 +20,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	if ((*n & mask) == 0)  /* If the bit is already 0, no need to modify */
 		return 1;
 
-	*n = *n ^ mask;  // Use XOR to clear the bit at the specified index
+	*n = *n ^ mask;  /* Use XOR to clear the bit at the specified index*/
 
 	return 1;
 }
