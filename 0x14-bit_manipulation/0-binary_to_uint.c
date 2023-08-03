@@ -16,7 +16,7 @@ unsigned int binary_to_uint(const char *b)
 	int i;
 	unsigned int digit;
 
-	if (!b)
+	if (!b)	/* checks if the input string is NULL*/
 		return (0);
 
 	while (b[length])
