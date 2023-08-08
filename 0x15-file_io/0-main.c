@@ -4,6 +4,8 @@
 
 /**
  * main - check the code
+ * @ac: main argumrnts 1
+ * @av: main arguments two
  *
  * Return: Always 0.
  */
