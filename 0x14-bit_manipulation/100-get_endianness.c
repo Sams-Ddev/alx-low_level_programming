@@ -14,6 +14,6 @@ int get_endianness(void)
 	if (*byte)
 		return 1; /* Little endian */
 	else
-		return 0; /* Big endian */
+		return (0); /* Big endian */
 }
 
