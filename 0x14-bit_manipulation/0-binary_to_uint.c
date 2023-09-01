@@ -5,8 +5,7 @@
  * an unsigned int.
  * @b:is pointing to a string of 0 and 1 chars
  *
- * Return: the converted numbe for sucess
- * or 0 if b is NULL or b != binary.
+ * Return: the conv_num.
  */
 
 unsigned int binary_to_uint(const char *b)
