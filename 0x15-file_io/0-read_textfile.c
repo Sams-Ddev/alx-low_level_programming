@@ -1,54 +1,39 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
 #include "main.h"
+#include <stdlib.h>
+
 /**
- * read_textfile - function that reads a text file and prints it to POSIX stdout.
- * @filename: filename.
- * @letters: letters is the number of letters it should read and print
+ * read_textfile - Reads a text file and prints it to POSIX stdout.
+ * @filename: A pointer to the name of the file.
+ * @letters: The number of letters the
+ *           function should read and print.
  *
- * Return:  actual number of letters it could read and print.
+ * Return: If the function fails or filename is NULL - 0.
+ *         O/w - the actual number of bytes the function can read and print.
  */
+ssize_t read_textfile(const char *filename, size_t letters)
+{
+	ssize_t o, r, w;
+	char *buffer;
 
-ssize_t read_textfile(const char *filename, size_t letters) {
-    if (filename == NULL)
-        return 0;
+	if (filename == NULL)
+		return (0);
 
-    int file_descriptor, bytes_read, bytes_written;
-    char *buffer;
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
+		return (0);
 
-    /* Open the file for reading*/
-    file_descriptor = open(filename, O_RDONLY);
-    if (file_descriptor == -1)
-        return 0;
+	o = open(filename, O_RDONLY);
+	r = read(o, buffer, letters);
+	w = write(STDOUT_FILENO, buffer, r);
 
-    /* Allocate memory for a buffer*/
-    buffer = malloc(sizeof(char) * letters);
-    if (buffer == NULL) {
-        close(file_descriptor);
-        return 0;
-    }
+	if (o == -1 || r == -1 || w == -1 || w != r)
+	{
+		free(buffer);
+		return (0);
+	}
 
-    /* Read from the file*/
-    bytes_read = read(file_descriptor, buffer, letters);
-    if (bytes_read == -1) {
-        close(file_descriptor);
-        free(buffer);
-        return 0;
-    }
+	free(buffer);
+	close(o);
 
-    /* Write to standard output */
-    bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
-    if (bytes_written == -1 || bytes_written != bytes_read) {
-        close(file_descriptor);
-        free(buffer);
-        return 0;
-    }
-
-    /* Clean up and return the actual number of letters read and printed */
-    close(file_descriptor);
-    free(buffer);
-    return bytes_written;
+	return (w);
 }
-
