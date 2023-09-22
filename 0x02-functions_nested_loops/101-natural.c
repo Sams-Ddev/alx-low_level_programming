@@ -1,61 +1,32 @@
-#include "main.h"
-#include <unistd.h>
+#include <stdio.h>
 
 /**
- *
- * _putchar - prints single char to std output
- *
- * sum_of_multiples() - compute the sum of multiples
- *
- * main - recurses thr individual functions
- *
- * Return - 0 (success)
+ * main - computes and prints the sum of all multiples
+ * of 3 or 5 below 1024
+ * Return: Always 0 (success)
  */
-
-int _putchar(char c);
-
-int _putchar(char c)
-{
-	int _putchar(char c);
-	return (putchar(c));
-}
-
-int sum_of_multiples(void)
-{
-	int sum = 0;
-	int i;
-
-	for (i = 0; i < 1024; i++)
-	{
-		if (i % 3 == 0 || i % 5 == 0)
-			sum += i;
-	}
-
-	return (sum);
-}
-
 int main(void)
 {
-	int result = sum_of_multiples();
-	int digit;
-	int divisor = 10;
+	unsigned long int sum3;
+	unsigned long int sum5;
+	unsigned long int sum;
+	int i;
 
-	if (result == 0)
+	sum3 = 0;
+	sum5 = 0;
+	sum = 0;
+
+	for (i = 0; i < 1024; ++i)
 	{
-		_putchar('0');
-	}
-	else
-	{
-		while (result != 0)
+		if ((i % 3) == 0)
 		{
-			digit = result % divisor;
-			_putchar('0' + digit);
-			result /= divisor;
+			sum3 = sum3 + i;
+		} else if ((i % 5) == 0)
+		{
+			sum5 = sum5 + i;
 		}
 	}
-
-	_putchar('\n');
-
+	sum = sum3 + sum5;
+	printf("%lu\n", sum);
 	return (0);
 }
-
