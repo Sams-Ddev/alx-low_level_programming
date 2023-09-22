@@ -1,31 +1,34 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include "main.h" // Include your header file here
+#include "main.h"
 
-int append_text_to_file(const char *filename, char *text_content) {
-    if (filename == NULL)
-        return -1;
+/**
+ * append_text_to_file - fuunftion appends text at the end of a file
+ * @filename: file to append the text to
+ * @text_content: content to append into the file
+ *
+ * Return: 1 on success and -1 on failure
+ */
+int append_text_to_file(const char *filename, char *text_content)
+{
+	int fd, a, b = 0;
 
-    int file_descriptor, write_result;
+	if (!filename)
+		return (-1);
 
-    // Open the file for appending, if it doesn't exist, return -1
-    file_descriptor = open(filename, O_WRONLY | O_APPEND);
-    if (file_descriptor == -1)
-        return -1;
+	fd = open(filename, O_WRONLY | O_APPEND);
+	if (fd < 0)
+		return (-1);
 
-    // If text_content is not NULL, append it to the file
-    if (text_content != NULL) {
-        write_result = write(file_descriptor, text_content, strlen(text_content));
-        if (write_result == -1) {
-            close(file_descriptor);
-            return -1;
-        }
-    }
+	if (text_content)
+	{
+		while (text_content[b])
+			b++;
+		a = write(fd, text_content, b);
+		if (a != b)
+			return (-1);
+	}
 
-    // Close the file and return success (1)
-    close(file_descriptor);
-    return 1;
+	close(fd);
+
+	return (1);
 }
 
