@@ -11,8 +11,8 @@ int get_bit(unsigned long int n, unsigned int index)
 	/*initializes mnumb to the value 0x01 (00000001)*/
 	unsigned long int numb = 0x01;
 
-	/* multiplies max by 2 raised to the power of the index. */
-	max <<= index;
+	/* multiplies numb by 2 raised to the power of the index. */
+	numb <<= index;
 	if (numb == 0)
 		return (-1);
 
