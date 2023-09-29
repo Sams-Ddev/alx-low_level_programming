@@ -14,7 +14,8 @@ void print_binary(unsigned long int n)
 		print_binary(n >> 1);
 	}
 
-	/* Once the input value is 1 or less, the function prints
+	/*
+	 * Once the input value is 1 or less, the function prints
 	 * the least significant bit of the value to the console
 	 */
 	_putchar((n & 1) + '0');
