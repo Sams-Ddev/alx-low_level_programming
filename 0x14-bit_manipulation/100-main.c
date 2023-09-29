@@ -1,5 +1,10 @@
 #include <stdio.h>
 #include "main.h"
+/**
+ * main - entry point to program
+ *
+ * Return: void
+ */
 
 int main(void)
 {
