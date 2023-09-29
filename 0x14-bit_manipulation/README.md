@@ -78,5 +78,5 @@ To get started with this project, follow these steps:
 
 Good luck with your project! If you have any questions or need assistance, feel free to reach out.
 
-**Copyright © 2023 ALX (SWE Engineer_Zee) All rights reserved.**
+**Copyright © 2023 ALX, All rights reserved.**
 
