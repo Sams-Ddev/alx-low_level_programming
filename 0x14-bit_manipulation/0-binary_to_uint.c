@@ -3,12 +3,12 @@
 /**
  * binary_to_uint - a function that converts a bits to
  * an unsigned int.
- * @bi:is pointing to a string of 0 and 1 chars
+ * @b:is pointing to a string of 0 and 1 chars
  *
  * Return:(conv_numb).
  */
 
-unsigned int binary_to_uint(const char *bi)
+unsigned int binary_to_uint(const char *b)
 {
 	unsigned int conv_numb = 0;
 	int strg_length;
@@ -16,19 +16,19 @@ unsigned int binary_to_uint(const char *bi)
 	char c;
 	unsigned int bit_value;
 
-	if (!bi)
+	if (!b)
 		return (0);/* returns 0 if bi is NULL*/
 
 
 	/* calculating the string_lenght(strg_length) in bi*/
 	strg_length = 0;
-	while (bi[strg_length] != '\0')
+	while (b[strg_length] != '\0')
 		strg_length++;
 
 	/* Checking for '0' and '1' in the string b */
 	for (i = 0; i < strg_length; i++)
 	{
-		c = bi[i];
+		c = b[i];
 		if (c == '0' || c == '1')
 		{
 			/* Calculating the decimal value of currunt bit */
